@@ -29,6 +29,10 @@ window/stretch/aspect="keep_width"
 
 project/assembly_name="Dog Jumper"
 
+[gui]
+
+theme/custom_font="res://Assets/Fonts/CoffeehouseCyrilic-Regular_0.otf"
+
 [rendering]
 
 renderer/rendering_method="mobile"
