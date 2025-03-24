@@ -13,17 +13,21 @@ config_version=5
 config/name="Dog Jumper"
 config/version="1.0"
 run/main_scene="res://Scn/Main.tscn"
+run/enable_alt_space_menu=true
 config/features=PackedStringArray("4.3", "C#", "Mobile")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://Assets/Logos/DogJumperLogo.png"
 config/icon="res://Assets/Logos/Logo128.png"
+boot_splash/minimum_display_time=3000
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
+mouse_cursor/custom_image="res://Assets/Sprites/UI/cursor.png"
 
 [dotnet]
 
@@ -36,3 +40,4 @@ theme/custom_font="res://Assets/Fonts/CoffeehouseCyrilic-Regular_0.otf"
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
