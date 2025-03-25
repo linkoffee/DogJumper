@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk000u8a5icve"]
+
+[ext_resource type="Texture2D" uid="uid://c52vlolqurx6n" path="res://Assets/Sprites/UI/BonusObjects/clover.png" id="1_1pkpj"]
+[ext_resource type="Script" path="res://Scripts/Obj/CloverObj.cs" id="1_x5im1"]
+[ext_resource type="AudioStream" uid="uid://cay4ag2kn70ss" path="res://Assets/Audio/Sfx/Eat.ogg" id="2_y3xid"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gb75n"]
+radius = 29.2746
+
+[node name="CloverObj" type="Area2D"]
+script = ExtResource("1_x5im1")
+SoundEffect = ExtResource("2_y3xid")
+
+[node name="CloverCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gb75n")
+
+[node name="CloverTexture" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_1pkpj")

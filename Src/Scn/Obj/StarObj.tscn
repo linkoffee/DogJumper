@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://d088fkgy2rqq"]
+
+[ext_resource type="Texture2D" uid="uid://d3p73ieb365ko" path="res://Assets/Sprites/UI/BonusObjects/star.png" id="1_5yl1a"]
+[ext_resource type="Script" path="res://Scripts/Obj/StarObj.cs" id="1_olaep"]
+[ext_resource type="AudioStream" uid="uid://b33ssbwb2tk7v" path="res://Assets/Audio/Sfx/Star.ogg" id="2_f2gab"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3uyf5"]
+radius = 27.8927
+
+[node name="StarObj" type="Area2D"]
+script = ExtResource("1_olaep")
+SoundEffect = ExtResource("2_f2gab")
+
+[node name="StarCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3uyf5")
+
+[node name="StarTexture" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_5yl1a")
