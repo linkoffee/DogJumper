@@ -1,0 +1,67 @@
+[gd_scene load_steps=13 format=3 uid="uid://ctk5ym5ty313m"]
+
+[ext_resource type="Texture2D" uid="uid://betjh0cxivjt6" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk1.png" id="1_arcxb"]
+[ext_resource type="Texture2D" uid="uid://c0ee6s83vs5x1" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk2.png" id="2_8v1n6"]
+[ext_resource type="Texture2D" uid="uid://whfwsn7ulce8" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk3.png" id="3_20tnx"]
+[ext_resource type="Texture2D" uid="uid://bkobm0ukdqwhy" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk4.png" id="4_uujep"]
+[ext_resource type="Texture2D" uid="uid://cb8hxap6vtw62" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk5.png" id="5_cgrqn"]
+[ext_resource type="Texture2D" uid="uid://blie0howchp6l" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk6.png" id="6_jqst8"]
+[ext_resource type="Texture2D" uid="uid://crpbv4mn2yyg0" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk7.png" id="7_41vpa"]
+[ext_resource type="Texture2D" uid="uid://yau0bcr1vxfj" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk8.png" id="8_00ydb"]
+[ext_resource type="Texture2D" uid="uid://c644wf3hdx0pd" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk9.png" id="9_7c2w2"]
+[ext_resource type="Texture2D" uid="uid://djvjxayiy4mbl" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk10.png" id="10_bekru"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1ttm"]
+size = Vector2(93, 73)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5eigd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_arcxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8v1n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_20tnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uujep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cgrqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jqst8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_41vpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_00ydb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7c2w2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bekru")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 15.0
+}]
+
+[node name="HedgehogEnemy" type="CharacterBody2D"]
+
+[node name="HedgehogCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-5.5, -7.5)
+shape = SubResource("RectangleShape2D_n1ttm")
+
+[node name="HedgehogAnimation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_5eigd")
+animation = &"Walk"
+autoplay = "Walk"
+frame_progress = 0.595193
+flip_h = true

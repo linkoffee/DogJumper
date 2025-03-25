@@ -1,0 +1,100 @@
+[gd_scene load_steps=18 format=3 uid="uid://c2bfbqyn4l41b"]
+
+[ext_resource type="Texture2D" uid="uid://bpwu8xaaf12av" path="res://Assets/Sprites/Characters/Player/DogRunning01.png" id="1_tlxqr"]
+[ext_resource type="Script" path="res://Scripts/Characters/Player/Player.cs" id="1_urxlg"]
+[ext_resource type="Texture2D" uid="uid://b41xt81vwybdq" path="res://Assets/Sprites/Characters/Player/DogRunning02.png" id="2_dwock"]
+[ext_resource type="Texture2D" uid="uid://dy5mxiflx0m6c" path="res://Assets/Sprites/Characters/Player/DogRunning03.png" id="3_kj6g4"]
+[ext_resource type="Texture2D" uid="uid://cmi1ogy2e8jph" path="res://Assets/Sprites/Characters/Player/DogRunning04.png" id="4_uqio6"]
+[ext_resource type="Texture2D" uid="uid://c4s54jj0rpkva" path="res://Assets/Sprites/Characters/Player/DogRunning05.png" id="5_o2bom"]
+[ext_resource type="Texture2D" uid="uid://cbtkx7qrtihdc" path="res://Assets/Sprites/Characters/Player/DogRunning06.png" id="6_h4e38"]
+[ext_resource type="Texture2D" uid="uid://bwlekrlpccf5p" path="res://Assets/Sprites/Characters/Player/DogRunning07.png" id="7_8bp6n"]
+[ext_resource type="Texture2D" uid="uid://b7fld243wq8rp" path="res://Assets/Sprites/Characters/Player/DogRunning08.png" id="8_mpd8i"]
+[ext_resource type="Texture2D" uid="uid://bix0imjw8rsdl" path="res://Assets/Sprites/Characters/Player/DogRunning09.png" id="9_q8gav"]
+[ext_resource type="Texture2D" uid="uid://dj87as1u74mc3" path="res://Assets/Sprites/Characters/Player/DogRunning10.png" id="10_13cly"]
+[ext_resource type="Texture2D" uid="uid://cv6w4opn6jkug" path="res://Assets/Sprites/Characters/Player/DogRunning11.png" id="11_wkjp7"]
+[ext_resource type="Texture2D" uid="uid://mpg5m40skybc" path="res://Assets/Sprites/Characters/Player/DogRunning12.png" id="12_onu8v"]
+[ext_resource type="Texture2D" uid="uid://d0jc6m0473vp0" path="res://Assets/Sprites/Characters/Player/DogRunning13.png" id="13_ga141"]
+[ext_resource type="AudioStream" uid="uid://234slnnjprh8" path="res://Assets/Audio/Sfx/DogBarking.ogg" id="15_owg02"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogv2k"]
+size = Vector2(273, 135)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_onh56"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_13cly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wkjp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_onu8v")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tlxqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dwock")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kj6g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uqio6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_o2bom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h4e38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8bp6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mpd8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_q8gav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_13cly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wkjp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_onu8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ga141")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 30.0
+}]
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("TimedSound") groups=["player"]]
+script = ExtResource("1_urxlg")
+TimedSound = NodePath("DogBarkingSfx")
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-6.5, 7.5)
+shape = SubResource("RectangleShape2D_ogv2k")
+
+[node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_onh56")
+animation = &"Run"
+autoplay = "Run"
+frame_progress = 0.9091
+
+[node name="DogBarkingSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_owg02")
+pitch_scale = 1.3

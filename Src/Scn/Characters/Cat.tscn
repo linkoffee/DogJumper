@@ -1,0 +1,66 @@
+[gd_scene load_steps=13 format=3 uid="uid://dom30s6wo55wj"]
+
+[ext_resource type="Texture2D" uid="uid://cx04w7bwtfq1b" path="res://Assets/Sprites/Characters/Cat/CatRunning01.png" id="1_cqpw2"]
+[ext_resource type="Texture2D" uid="uid://ihh7bt2eb0ii" path="res://Assets/Sprites/Characters/Cat/CatRunning02.png" id="2_2xuvw"]
+[ext_resource type="Texture2D" uid="uid://du5d8lq30sl36" path="res://Assets/Sprites/Characters/Cat/CatRunning03.png" id="3_6nxct"]
+[ext_resource type="Texture2D" uid="uid://j3g7xs0jf2qt" path="res://Assets/Sprites/Characters/Cat/CatRunning04.png" id="4_j7ucn"]
+[ext_resource type="Texture2D" uid="uid://drj2wmsrl2b72" path="res://Assets/Sprites/Characters/Cat/CatRunning05.png" id="5_e5onh"]
+[ext_resource type="Texture2D" uid="uid://bsnannkircgme" path="res://Assets/Sprites/Characters/Cat/CatRunning06.png" id="6_yrttj"]
+[ext_resource type="Texture2D" uid="uid://bns01v88qagsu" path="res://Assets/Sprites/Characters/Cat/CatRunning07.png" id="7_ewx4a"]
+[ext_resource type="Texture2D" uid="uid://drwcm1av8qg7y" path="res://Assets/Sprites/Characters/Cat/CatRunning08.png" id="8_lvvgg"]
+[ext_resource type="Texture2D" uid="uid://cs4alvtrq2ba6" path="res://Assets/Sprites/Characters/Cat/CatRunning09.png" id="9_bsuj7"]
+[ext_resource type="Texture2D" uid="uid://bxoopos1tnueg" path="res://Assets/Sprites/Characters/Cat/CatRunning10.png" id="10_ieeje"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jl23p"]
+size = Vector2(196, 88)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tg8k3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cqpw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xuvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6nxct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j7ucn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_e5onh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yrttj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ewx4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lvvgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bsuj7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ieeje")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 20.0
+}]
+
+[node name="Cat" type="CharacterBody2D"]
+
+[node name="CatCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_jl23p")
+
+[node name="CatAnimation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_tg8k3")
+animation = &"Run"
+autoplay = "Run"
+frame_progress = 0.681218
