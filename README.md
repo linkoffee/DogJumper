@@ -5,8 +5,7 @@
 
 ![GitHub release (latest by date)](https://img.shields.io/github/release/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
 ![GitHub](https://img.shields.io/github/license/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
-![Platform](https://img.shields.io/badge/platform-Android%20|%20IOS%20-informational?style=for-the-badge&color=FFFFFF)\
-![GitHub issues](https://img.shields.io/github/issues/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
+![Platform](https://img.shields.io/badge/platform-Android%20|%20Windows%20Linux-informational?style=for-the-badge&color=FFFFFF)\
 ![GitHub last commit](https://img.shields.io/github/last-commit/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
 ![GitHub Repo stars](https://img.shields.io/github/stars/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
 ![GitHub watchers](https://img.shields.io/github/watchers/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
