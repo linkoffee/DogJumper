@@ -1,0 +1,264 @@
+[gd_scene load_steps=31 format=3 uid="uid://clm5gvy133adt"]
+
+[ext_resource type="Script" path="res://Scripts/Main/ParallaxBg.cs" id="1_le0ki"]
+[ext_resource type="Texture2D" uid="uid://3h378xyxve72" path="res://Assets/Sprites/Bg/6.png" id="2_xhism"]
+[ext_resource type="Texture2D" uid="uid://bgs08bn13s2mf" path="res://Assets/Sprites/Bg/5.png" id="3_johbl"]
+[ext_resource type="Texture2D" uid="uid://b6synyxgkkqu7" path="res://Assets/Sprites/Bg/4.png" id="4_532ic"]
+[ext_resource type="Texture2D" uid="uid://c63oj8815keg6" path="res://Assets/Sprites/Bg/3.png" id="5_8swr0"]
+[ext_resource type="Texture2D" uid="uid://kje7i2pfbpqs" path="res://Assets/Sprites/Bg/2.png" id="6_ir53l"]
+[ext_resource type="Texture2D" uid="uid://dtgxp266isqpm" path="res://Assets/Sprites/Bg/1.png" id="7_s15lu"]
+[ext_resource type="Texture2D" uid="uid://823sg3cwvgf7" path="res://Assets/Sprites/Bg/0.png" id="8_dvakh"]
+[ext_resource type="Script" path="res://Scripts/Main/BgMsc.cs" id="9_d0pm3"]
+[ext_resource type="AudioStream" uid="uid://nttycnc0x2pk" path="res://Assets/Audio/Msc/Msc1.ogg" id="10_7u8ro"]
+[ext_resource type="AudioStream" uid="uid://t3x7rl8c4vpq" path="res://Assets/Audio/Msc/Msc2.ogg" id="11_21508"]
+[ext_resource type="AudioStream" uid="uid://dtydxft6s66do" path="res://Assets/Audio/Msc/Msc3.ogg" id="12_bc6hb"]
+[ext_resource type="AudioStream" uid="uid://dv8qy5kis07sn" path="res://Assets/Audio/Msc/Msc4.ogg" id="13_1hyqn"]
+[ext_resource type="AudioStream" uid="uid://c7x7b8tidtaqs" path="res://Assets/Audio/Msc/Msc5.ogg" id="14_641g7"]
+[ext_resource type="AudioStream" uid="uid://02aagm1x8t51" path="res://Assets/Audio/Msc/Msc6.ogg" id="15_1vjtd"]
+[ext_resource type="AudioStream" uid="uid://ctmaen1adng5g" path="res://Assets/Audio/Msc/Msc7.ogg" id="16_6dw4h"]
+[ext_resource type="PackedScene" uid="uid://c2bfbqyn4l41b" path="res://Scn/Characters/Player.tscn" id="17_mi8gl"]
+[ext_resource type="PackedScene" uid="uid://dom30s6wo55wj" path="res://Scn/Characters/Cat.tscn" id="18_4rovp"]
+[ext_resource type="Texture2D" uid="uid://dunvdy8gjys2e" path="res://Assets/Sprites/UI/pannel.png" id="19_kmv26"]
+[ext_resource type="Texture2D" uid="uid://bhaaafyfq2tob" path="res://Assets/Sprites/UI/heart.png" id="20_gendo"]
+[ext_resource type="Texture2D" uid="uid://mfd7gseillkl" path="res://Assets/Sprites/UI/RestartPannel/restartPannel.png" id="21_jh8le"]
+[ext_resource type="Texture2D" uid="uid://dai48psn4q61w" path="res://Assets/Sprites/UI/closeGameBtn.png" id="21_pjqgv"]
+[ext_resource type="Texture2D" uid="uid://db3mrw3e1bdhr" path="res://Assets/Sprites/UI/RestartPannel/restartTable.png" id="22_kr2g5"]
+[ext_resource type="Script" path="res://Scripts/Main/YouScore.cs" id="22_qljmc"]
+[ext_resource type="Texture2D" uid="uid://t1f3m52frqdx" path="res://Assets/Sprites/UI/RestartPannel/header.png" id="23_e2euv"]
+[ext_resource type="Texture2D" uid="uid://kyqh3fspcvhf" path="res://Assets/Sprites/UI/RestartPannel/restartBtn.png" id="24_hx0sb"]
+[ext_resource type="Texture2D" uid="uid://byrkd7mys25my" path="res://Assets/Sprites/UI/RestartPannel/closeGameFlatBtn.png" id="25_s3ph8"]
+[ext_resource type="Script" path="res://Scripts/Main/BonusObjectsSpawner.cs" id="28_anb6x"]
+[ext_resource type="PackedScene" uid="uid://dk000u8a5icve" path="res://Scn/Obj/CloverObj.tscn" id="29_cntsx"]
+[ext_resource type="PackedScene" uid="uid://d088fkgy2rqq" path="res://Scn/Obj/StarObj.tscn" id="30_uarxo"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="ParallaxBg" type="ParallaxBackground" parent="."]
+script = ExtResource("1_le0ki")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBg"]
+motion_mirroring = Vector2(1280, 0)
+metadata/scrollSpeed = 0.0
+
+[node name="Layer6Texture" type="Sprite2D" parent="ParallaxBg/ParallaxLayer6"]
+position = Vector2(638.5, 305.5)
+scale = Vector2(0.2582, 0.516614)
+texture = ExtResource("2_xhism")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBg"]
+motion_mirroring = Vector2(1280, 0)
+metadata/scrollSpeed = 0.5
+
+[node name="Layer5Texture" type="Sprite2D" parent="ParallaxBg/ParallaxLayer5"]
+position = Vector2(638.5, 197)
+scale = Vector2(0.2582, 0.338983)
+texture = ExtResource("3_johbl")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBg"]
+motion_mirroring = Vector2(1280, 0)
+metadata/scrollSpeed = 1.0
+
+[node name="Layer4Texture" type="Sprite2D" parent="ParallaxBg/ParallaxLayer4"]
+position = Vector2(638.5, 282.5)
+scale = Vector2(0.2582, 0.311063)
+texture = ExtResource("4_532ic")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBg"]
+motion_mirroring = Vector2(1280, 0)
+metadata/scrollSpeed = 1.5
+
+[node name="Layer3Texture" type="Sprite2D" parent="ParallaxBg/ParallaxLayer3"]
+position = Vector2(638.875, 286.125)
+scale = Vector2(0.25805, 0.25624)
+texture = ExtResource("5_8swr0")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBg"]
+motion_mirroring = Vector2(1280, 0)
+metadata/scrollSpeed = 1.5
+
+[node name="Layer2Texture" type="Sprite2D" parent="ParallaxBg/ParallaxLayer2"]
+position = Vector2(639, 440)
+scale = Vector2(0.258, 0.303977)
+texture = ExtResource("6_ir53l")
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBg"]
+motion_mirroring = Vector2(1280, 0)
+metadata/scrollSpeed = 1.5
+
+[node name="Layer1Texture" type="Sprite2D" parent="ParallaxBg/ParallaxLayer1"]
+position = Vector2(639.25, 559)
+scale = Vector2(0.2583, 0.331653)
+texture = ExtResource("7_s15lu")
+
+[node name="ParallaxLayer0" type="ParallaxLayer" parent="ParallaxBg"]
+motion_mirroring = Vector2(1280, 0)
+metadata/scrollSpeed = 1.5
+
+[node name="Layer0Texture" type="Sprite2D" parent="ParallaxBg/ParallaxLayer0"]
+position = Vector2(639.5, 688.5)
+scale = Vector2(0.2582, 0.1875)
+texture = ExtResource("8_dvakh")
+
+[node name="BgMsc" type="AudioStreamPlayer" parent="."]
+autoplay = true
+script = ExtResource("9_d0pm3")
+MusicTracks = [ExtResource("10_7u8ro"), ExtResource("11_21508"), ExtResource("12_bc6hb"), ExtResource("13_1hyqn"), ExtResource("14_641g7"), ExtResource("15_1vjtd"), ExtResource("16_6dw4h")]
+
+[node name="Player" parent="." instance=ExtResource("17_mi8gl")]
+position = Vector2(192, 500)
+FallSpeed = 350.0
+
+[node name="Cat" parent="." instance=ExtResource("18_4rovp")]
+position = Vector2(1039, 523)
+
+[node name="HeartPannel" type="Sprite2D" parent="."]
+position = Vector2(158.125, 53.25)
+scale = Vector2(0.22631, 0.0814076)
+texture = ExtResource("19_kmv26")
+
+[node name="Heart1" type="Sprite2D" parent="HeartPannel"]
+position = Vector2(-401.058, -9.51522)
+scale = Vector2(1.68985, 3.38716)
+texture = ExtResource("20_gendo")
+
+[node name="Heart2" type="Sprite2D" parent="HeartPannel"]
+position = Vector2(-14.4903, -9.51502)
+scale = Vector2(1.68985, 3.38716)
+texture = ExtResource("20_gendo")
+
+[node name="Heart3" type="Sprite2D" parent="HeartPannel"]
+position = Vector2(368.51, -9.51502)
+scale = Vector2(1.68985, 3.38716)
+texture = ExtResource("20_gendo")
+
+[node name="RestartPannel" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(658, 352)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("21_jh8le")
+
+[node name="RestartTable" type="Sprite2D" parent="RestartPannel"]
+position = Vector2(-15, -145)
+texture = ExtResource("22_kr2g5")
+
+[node name="Header" type="Sprite2D" parent="RestartPannel"]
+position = Vector2(-17.5, -607.5)
+texture = ExtResource("23_e2euv")
+
+[node name="RestartBtn" type="TextureButton" parent="RestartPannel"]
+offset_left = -272.5
+offset_top = 340.0
+offset_right = -58.5
+offset_bottom = 555.0
+texture_normal = ExtResource("24_hx0sb")
+metadata/_edit_use_anchors_ = true
+
+[node name="ExitFromGameBtn" type="TextureButton" parent="RestartPannel"]
+offset_left = 12.5
+offset_top = 340.0
+offset_right = 226.5
+offset_bottom = 555.0
+texture_normal = ExtResource("25_s3ph8")
+metadata/_edit_use_anchors_ = true
+
+[node name="YouScore" type="Control" parent="RestartPannel"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -367.5
+offset_top = -420.0
+offset_right = 316.5
+offset_bottom = -153.0
+
+[node name="YouScoreLabel" type="Label" parent="RestartPannel/YouScore"]
+layout_mode = 0
+offset_left = 64.4999
+offset_top = 19.5
+offset_right = 633.5
+offset_bottom = 134.5
+theme_override_colors/font_shadow_color = Color(0, 0.513726, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "you score"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="YouScoreValue" type="Label" parent="RestartPannel/YouScore"]
+layout_mode = 0
+offset_left = 57.5
+offset_top = 127.5
+offset_right = 626.5
+offset_bottom = 242.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+theme_override_font_sizes/font_size = 70
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BestScore" type="Control" parent="RestartPannel"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -362.5
+offset_top = -102.5
+offset_right = 321.5
+offset_bottom = 164.5
+
+[node name="BestScoreLabel" type="Label" parent="RestartPannel/BestScore"]
+layout_mode = 0
+offset_left = 57.5
+offset_top = 50.0
+offset_right = 626.5
+offset_bottom = 165.0
+theme_override_colors/font_color = Color(0.252678, 0.940117, 0.234197, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 50
+text = "best score"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BestScoreValue" type="Label" parent="RestartPannel/BestScore"]
+layout_mode = 0
+offset_left = 57.5
+offset_top = 127.5
+offset_right = 626.5
+offset_bottom = 242.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+theme_override_font_sizes/font_size = 40
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitFromGameBtn" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1183.0
+offset_top = 14.0
+offset_right = 1264.0
+offset_bottom = 94.0
+texture_normal = ExtResource("21_pjqgv")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="YouScoreValue" type="Label" parent="." groups=["score"]]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 19.0
+offset_right = 381.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.356863, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+theme_override_font_sizes/font_size = 80
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("22_qljmc")
+
+[node name="BonusObjectsSpawner" type="Node" parent="."]
+script = ExtResource("28_anb6x")
+BonusPrefabs = Array[PackedScene]([ExtResource("29_cntsx"), ExtResource("30_uarxo")])
