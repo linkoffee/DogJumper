@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://clm5gvy133adt"]
+[gd_scene load_steps=32 format=3 uid="uid://clm5gvy133adt"]
 
 [ext_resource type="Script" path="res://Scripts/Main/ParallaxBg.cs" id="1_le0ki"]
 [ext_resource type="Texture2D" uid="uid://3h378xyxve72" path="res://Assets/Sprites/Bg/6.png" id="2_xhism"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://t1f3m52frqdx" path="res://Assets/Sprites/UI/RestartPannel/header.png" id="23_e2euv"]
 [ext_resource type="Texture2D" uid="uid://kyqh3fspcvhf" path="res://Assets/Sprites/UI/RestartPannel/restartBtn.png" id="24_hx0sb"]
 [ext_resource type="Texture2D" uid="uid://byrkd7mys25my" path="res://Assets/Sprites/UI/RestartPannel/closeGameFlatBtn.png" id="25_s3ph8"]
+[ext_resource type="Script" path="res://Scripts/Buttons/ExitFromGameBtn.cs" id="27_rvcag"]
 [ext_resource type="Script" path="res://Scripts/Main/BonusObjectsSpawner.cs" id="28_anb6x"]
 [ext_resource type="PackedScene" uid="uid://dk000u8a5icve" path="res://Scn/Obj/CloverObj.tscn" id="29_cntsx"]
 [ext_resource type="PackedScene" uid="uid://d088fkgy2rqq" path="res://Scn/Obj/StarObj.tscn" id="30_uarxo"]
@@ -243,6 +244,7 @@ offset_bottom = 94.0
 texture_normal = ExtResource("21_pjqgv")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("27_rvcag")
 
 [node name="YouScoreValue" type="Label" parent="." groups=["score"]]
 layout_mode = 0
@@ -262,3 +264,4 @@ script = ExtResource("22_qljmc")
 [node name="BonusObjectsSpawner" type="Node" parent="."]
 script = ExtResource("28_anb6x")
 BonusPrefabs = Array[PackedScene]([ExtResource("29_cntsx"), ExtResource("30_uarxo")])
+TargetParallaxLayerPath = NodePath("../ParallaxBg/ParallaxLayer1")
