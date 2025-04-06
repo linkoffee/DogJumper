@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://clm5gvy133adt"]
+[gd_scene load_steps=35 format=3 uid="uid://clm5gvy133adt"]
 
 [ext_resource type="Script" path="res://Scripts/Main/ParallaxBg.cs" id="1_le0ki"]
 [ext_resource type="Texture2D" uid="uid://3h378xyxve72" path="res://Assets/Sprites/Bg/6.png" id="2_xhism"]
@@ -31,6 +31,9 @@
 [ext_resource type="Script" path="res://Scripts/Main/BonusObjectsSpawner.cs" id="28_anb6x"]
 [ext_resource type="PackedScene" uid="uid://dk000u8a5icve" path="res://Scn/Obj/CloverObj.tscn" id="29_cntsx"]
 [ext_resource type="PackedScene" uid="uid://d088fkgy2rqq" path="res://Scn/Obj/StarObj.tscn" id="30_uarxo"]
+[ext_resource type="Script" path="res://Scripts/Main/EnemySpawner.cs" id="32_8a432"]
+[ext_resource type="PackedScene" uid="uid://ttgr86rx6mkb" path="res://Scn/Characters/EagleEnemy.tscn" id="33_cf8cs"]
+[ext_resource type="PackedScene" uid="uid://ctk5ym5ty313m" path="res://Scn/Characters/HedgehogEnemy.tscn" id="34_n511v"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -116,7 +119,7 @@ FallSpeed = 350.0
 [node name="Cat" parent="." instance=ExtResource("18_4rovp")]
 position = Vector2(1039, 523)
 
-[node name="HeartPannel" type="Sprite2D" parent="."]
+[node name="HeartPannel" type="Sprite2D" parent="." groups=["heart_panel"]]
 position = Vector2(158.125, 53.25)
 scale = Vector2(0.22631, 0.0814076)
 texture = ExtResource("19_kmv26")
@@ -264,4 +267,10 @@ script = ExtResource("22_qljmc")
 [node name="BonusObjectsSpawner" type="Node" parent="."]
 script = ExtResource("28_anb6x")
 BonusPrefabs = Array[PackedScene]([ExtResource("29_cntsx"), ExtResource("30_uarxo")])
+TargetParallaxLayerPath = NodePath("../ParallaxBg/ParallaxLayer1")
+
+[node name="EnemySpawner" type="Node" parent="."]
+script = ExtResource("32_8a432")
+EnemyPrefabs = Array[PackedScene]([ExtResource("33_cf8cs"), ExtResource("34_n511v")])
+SpeedMultiplier = 1.5
 TargetParallaxLayerPath = NodePath("../ParallaxBg/ParallaxLayer1")
