@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://ctk5ym5ty313m"]
+[gd_scene load_steps=15 format=3 uid="uid://ctk5ym5ty313m"]
 
 [ext_resource type="Texture2D" uid="uid://betjh0cxivjt6" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk1.png" id="1_arcxb"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemy.cs" id="1_dvf13"]
 [ext_resource type="Texture2D" uid="uid://c0ee6s83vs5x1" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk2.png" id="2_8v1n6"]
 [ext_resource type="Texture2D" uid="uid://whfwsn7ulce8" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk3.png" id="3_20tnx"]
 [ext_resource type="Texture2D" uid="uid://bkobm0ukdqwhy" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk4.png" id="4_uujep"]
@@ -10,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://yau0bcr1vxfj" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk8.png" id="8_00ydb"]
 [ext_resource type="Texture2D" uid="uid://c644wf3hdx0pd" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk9.png" id="9_7c2w2"]
 [ext_resource type="Texture2D" uid="uid://djvjxayiy4mbl" path="res://Assets/Sprites/Characters/HedgehogEnemy/HodgehogWalk10.png" id="10_bekru"]
+[ext_resource type="AudioStream" uid="uid://bcxxq7urqd4c4" path="res://Assets/Audio/Sfx/Hit.ogg" id="12_rbdtc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n1ttm"]
 size = Vector2(93, 73)
@@ -52,7 +54,16 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="HedgehogEnemy" type="CharacterBody2D"]
+[node name="HedgehogEnemy" type="CharacterBody2D" node_paths=PackedStringArray("HitSound", "DetectionArea")]
+script = ExtResource("1_dvf13")
+HitSound = NodePath("HitSound")
+DetectionArea = NodePath("DetectArea")
+
+[node name="DetectArea" type="Area2D" parent="."]
+
+[node name="HedgehogCollision" type="CollisionShape2D" parent="DetectArea"]
+position = Vector2(-5.5, -7.5)
+shape = SubResource("RectangleShape2D_n1ttm")
 
 [node name="HedgehogCollision" type="CollisionShape2D" parent="."]
 position = Vector2(-5.5, -7.5)
@@ -65,3 +76,7 @@ animation = &"Walk"
 autoplay = "Walk"
 frame_progress = 0.595193
 flip_h = true
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_rbdtc")
+volume_db = 10.0

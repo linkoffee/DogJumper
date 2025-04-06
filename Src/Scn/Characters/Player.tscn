@@ -17,7 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://234slnnjprh8" path="res://Assets/Audio/Sfx/DogBarking.ogg" id="15_owg02"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ogv2k"]
-size = Vector2(273, 135)
+size = Vector2(199, 124)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_onh56"]
 animations = [{
@@ -85,7 +85,7 @@ script = ExtResource("1_urxlg")
 TimedSound = NodePath("DogBarkingSfx")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
-position = Vector2(-6.5, 7.5)
+position = Vector2(24.5, 2)
 shape = SubResource("RectangleShape2D_ogv2k")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]

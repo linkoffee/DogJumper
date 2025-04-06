@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://ttgr86rx6mkb"]
+[gd_scene load_steps=16 format=3 uid="uid://ttgr86rx6mkb"]
 
 [ext_resource type="Texture2D" uid="uid://cw40khdkobw78" path="res://Assets/Sprites/Characters/EagleEnemy/EagleFly1.png" id="1_rmd1o"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemy.cs" id="1_srg46"]
 [ext_resource type="Texture2D" uid="uid://ctcocojb4e0kw" path="res://Assets/Sprites/Characters/EagleEnemy/EagleFly2.png" id="2_frlx7"]
 [ext_resource type="Texture2D" uid="uid://cnd5gtdbkjio1" path="res://Assets/Sprites/Characters/EagleEnemy/EagleFly3.png" id="3_rnc76"]
 [ext_resource type="Texture2D" uid="uid://4xn68ranosh5" path="res://Assets/Sprites/Characters/EagleEnemy/EagleFly4.png" id="4_8352o"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dbbpn5qbw1tf6" path="res://Assets/Sprites/Characters/EagleEnemy/EagleFly9.png" id="9_03jjq"]
 [ext_resource type="Texture2D" uid="uid://7smbj4n0jm03" path="res://Assets/Sprites/Characters/EagleEnemy/EagleFly10.png" id="10_at5un"]
 [ext_resource type="Texture2D" uid="uid://c4msg8mqg2yai" path="res://Assets/Sprites/Characters/EagleEnemy/EagleFly11.png" id="11_n3lmp"]
+[ext_resource type="AudioStream" uid="uid://bcxxq7urqd4c4" path="res://Assets/Audio/Sfx/Hit.ogg" id="13_sljj0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vuu2k"]
 size = Vector2(342, 321)
@@ -56,10 +58,15 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="EagleEnemy" type="CharacterBody2D"]
+[node name="EagleEnemy" type="CharacterBody2D" node_paths=PackedStringArray("HitSound", "DetectionArea")]
 scale = Vector2(0.45, 0.45)
+script = ExtResource("1_srg46")
+HitSound = NodePath("HitSound")
+DetectionArea = NodePath("DetectArea")
 
-[node name="EagleCollision" type="CollisionShape2D" parent="."]
+[node name="DetectArea" type="Area2D" parent="."]
+
+[node name="EagleCollision" type="CollisionShape2D" parent="DetectArea"]
 position = Vector2(4, -14.5)
 shape = SubResource("RectangleShape2D_vuu2k")
 
@@ -70,3 +77,11 @@ animation = &"Fly"
 autoplay = "Fly"
 frame_progress = 0.995788
 flip_h = true
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_sljj0")
+volume_db = 10.0
+
+[node name="EagleCollision" type="CollisionShape2D" parent="."]
+position = Vector2(4, -14.5)
+shape = SubResource("RectangleShape2D_vuu2k")
