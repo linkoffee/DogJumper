@@ -14,7 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://bcxxq7urqd4c4" path="res://Assets/Audio/Sfx/Hit.ogg" id="12_rbdtc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n1ttm"]
-size = Vector2(93, 73)
+size = Vector2(71, 73)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5eigd"]
 animations = [{
@@ -62,11 +62,11 @@ DetectionArea = NodePath("DetectArea")
 [node name="DetectArea" type="Area2D" parent="."]
 
 [node name="HedgehogCollision" type="CollisionShape2D" parent="DetectArea"]
-position = Vector2(-5.5, -7.5)
+position = Vector2(-1.5, -7.5)
 shape = SubResource("RectangleShape2D_n1ttm")
 
 [node name="HedgehogCollision" type="CollisionShape2D" parent="."]
-position = Vector2(-5.5, -7.5)
+position = Vector2(1.5, -7.5)
 shape = SubResource("RectangleShape2D_n1ttm")
 
 [node name="HedgehogAnimation" type="AnimatedSprite2D" parent="."]
