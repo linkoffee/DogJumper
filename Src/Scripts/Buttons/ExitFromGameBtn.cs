@@ -4,6 +4,7 @@ public partial class ExitFromGameBtn : TextureButton
 {
 	public override void _Ready()
 	{
+		ProcessMode = ProcessModeEnum.Always;
 		Pressed += OnButtonPressed;
 	}
 
