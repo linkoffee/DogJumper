@@ -4,11 +4,33 @@
 </p>
 
 ![GitHub release (latest by date)](https://img.shields.io/github/release/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
-![GitHub](https://img.shields.io/github/license/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
-![Platform](https://img.shields.io/badge/platform-Android%20|%20Windows%20Linux-informational?style=for-the-badge&color=FFFFFF)\
+![GitHub](https://img.shields.io/github/license/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)\
 ![GitHub last commit](https://img.shields.io/github/last-commit/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
 ![GitHub Repo stars](https://img.shields.io/github/stars/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
 ![GitHub watchers](https://img.shields.io/github/watchers/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
+
+---
+
+Indie game developed by only one person in the genre: `Casual`, `Endless Runner`.\
+You play as a dog, endlessly chasing a ginger cat, hoping to finally catch him, but every time he manages to run faster, catch that cat already!
+
+## Platforms
+<table>
+  <tr>
+    <td align="center">Android<br><code><b>✔️AVAILABLE</b></code></td>
+    <td align="center">Windows<br><code><b>✔️AVAILABLE</b></code></td>
+    <td align="center">Linux<br><code><b>✔️AVAILABLE</b></code></td>
+    <td align="center">MacOS<br><code><b>❌NOT SUPPORTED</b></code></td>
+    <td align="center">IOS<br><code><b>❌NOT SUPPORTED</b></code></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="Docs/Svgs/android_logo.svg" alt="Android_Logo"></td>
+    <td align="center"><img src="Docs/Svgs/windows_logo.svg" alt="Windows_Logo"></td>
+    <td align="center"><img src="Docs/Svgs/linux_logo.svg" alt="Linux_Logo"></td>
+    <td align="center"><img src="Docs/Svgs/macos_logo.svg" alt="macOS_Logo"></td>
+    <td align="center"><img src="Docs/Svgs/ios_logo.svg" alt="IOS_Logo"></td>
+  </tr>
+</table>
 
 ---
 
