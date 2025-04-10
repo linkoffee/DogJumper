@@ -1,6 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
-/android/
+.android/
 
 *.import
+Exports/
 export_presets.cfg
