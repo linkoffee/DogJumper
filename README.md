@@ -17,7 +17,7 @@ You play as a dog, endlessly chasing a ginger cat, hoping to finally catch him, 
 ## Platforms
 <table>
   <tr>
-    <td align="center">Android<br><code><b>✔️AVAILABLE</b></code></td>
+    <td align="center">Android<br><code><b>❌NOT SUPPORTED</b></code></td>
     <td align="center">Windows<br><code><b>✔️AVAILABLE</b></code></td>
     <td align="center">Linux<br><code><b>✔️AVAILABLE</b></code></td>
     <td align="center">MacOS<br><code><b>❌NOT SUPPORTED</b></code></td>
