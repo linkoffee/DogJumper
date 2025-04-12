@@ -3,11 +3,11 @@
   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Slackey&duration=5000&pause=1000&color=A4A4A4FF&center=true&repeat=false&width=500&lines=Catch+that+cat+already!" alt="Typing SVG" /></a>
 </p>
 
-![GitHub release (latest by date)](https://img.shields.io/github/release/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
-![GitHub](https://img.shields.io/github/license/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)\
-![GitHub last commit](https://img.shields.io/github/last-commit/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
-![GitHub Repo stars](https://img.shields.io/github/stars/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
-![GitHub watchers](https://img.shields.io/github/watchers/linkoffee/dog_jumper?style=for-the-badge&color=FFFFFF)
+![GitHub release (latest by date)](https://img.shields.io/github/release/linkoffee/DogJumper?style=for-the-badge&color=FFFFFF)
+![GitHub](https://img.shields.io/github/license/linkoffee/DogJumper?style=for-the-badge&color=FFFFFF)
+![GitHub last commit](https://img.shields.io/github/last-commit/linkoffee/DogJumper?style=for-the-badge&color=FFFFFF)
+![GitHub Repo stars](https://img.shields.io/github/stars/linkoffee/DogJumper?style=for-the-badge&color=FFFFFF)
+![GitHub watchers](https://img.shields.io/github/watchers/linkoffee/DogJumper?style=for-the-badge&color=FFFFFF)
 
 ---
 
